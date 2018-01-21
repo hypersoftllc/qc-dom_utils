@@ -7,7 +7,7 @@ describe('get.js', function () {
     expect(document).to.not.be.null
   })
 
-  it('`Element` should be available', function() {
+  it('`Element` should be available', function () {
     expect(Element).to.not.be.undefined
     expect(Element).to.not.be.null
   })
@@ -26,14 +26,12 @@ describe('get.js', function () {
         </div>
       `
 
-      document.body.insertAdjacentHTML(
-        'afterbegin',
-        fixture);
-    });
+      document.body.insertAdjacentHTML('afterbegin', fixture)
+    })
 
-    afterEach(function() {
-      document.body.removeChild(document.getElementById('fixture'));
-    });
+    afterEach(function () {
+      document.body.removeChild(document.getElementById('fixture'))
+    })
 
     it('called with a selector of an existing Element should return a reference to the element instance', function () {
       let elem
