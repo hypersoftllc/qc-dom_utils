@@ -1,6 +1,8 @@
 # qc-dom_utils
 
+[![Build Status][travis-svg]][travis-url]
 [![License][license-image]][license-url]
+[![Downloads][downloads-image]][downloads-url]
 
 [![npm badge][npm-badge-png]][package-url]
 
@@ -101,7 +103,11 @@ const focusFirstInvalid = require('qc-dom_utils/lib/cjs/form/focusFirstInvalidIn
 ```
 
 
+[downloads-image]: http://img.shields.io/npm/dm/qc-dom_utils.svg
+[downloads-url]: http://npm-stat.com/charts.html?package=qc-dom_utils
 [license-image]: http://img.shields.io/npm/l/qc-dom_utils.svg
 [license-url]: LICENSE
 [npm-badge-png]: https://nodei.co/npm/qc-dom_utils.png?downloads=true&stars=true
 [package-url]: https://npmjs.org/package/qc-dom_utils
+[travis-svg]: https://travis-ci.org/hypersoftllc/qc-dom_utils.svg?branch=master
+[travis-url]: https://travis-ci.org/hypersoftllc/qc-dom_utils
