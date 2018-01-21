@@ -1,0 +1,71 @@
+{
+  "name": "qc-dom_utils",
+  "version": "0.0.0-alpha",
+  "description": "A set of utilities for working with the DOM.",
+  "keywords": [
+    "document",
+    "dom",
+    "html",
+    "html5",
+    "javascript",
+    "form",
+    "getElementById",
+    "utilities",
+    "utility",
+    "window"
+  ],
+  "author": {
+    "name": "Danny Hurlburt",
+    "url": "https://github.com/dhurlburtusa"
+  },
+  "homepage": "https://github.com/hypersoftllc/qc-dom_utils#readme",
+  "license": "ISC",
+  "browserslist": [
+    "> 0.5%",
+    "Last 2 major versions",
+    "Firefox ESR"
+  ],
+  "engines": {
+    "node": ">=4.0.0",
+    "npm": ">=3.0.0"
+  },
+  "files": [
+    "lib/",
+    "src/index.js"
+  ],
+  "main": "lib/commonjs/index.js",
+  "bugs": {
+    "url": "https://github.com/hypersoftllc/qc-dom_utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hypersoftllc/qc-dom_utils.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "build:prod": "cross-env NODE_ENV=production node scripts/build.js",
+    "clean": "rimraf lib/",
+    "prepare": "npm run build:prod",
+    "test": "karma start",
+    "test:prod": "karma start --single-run --browsers PhantomJS"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.3",
+    "fs-extra": "^5.0.0",
+    "karma": "^2.0.0",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.9",
+    "mocha": "^5.0.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.10.0"
+  }
+}
