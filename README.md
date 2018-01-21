@@ -37,6 +37,24 @@ import get from 'qc-dom_utils/get'
 let elem = get('myElem')
 ```
 
+```js
+import DomUtils from 'qc-dom_utils'
+
+let formElem = DomUtils.getForm('myForm')
+```
+
+```js
+import FormUtils from 'qc-dom_utils/form'
+
+let formElem = FormUtils.get('myForm')
+```
+
+```js
+import getForm from 'qc-dom_utils/form/get'
+
+let formElem = getForm('myForm')
+```
+
 **Common JS**
 
 ```js
