@@ -1,6 +1,6 @@
 {
   "name": "qc-dom_utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of utilities for working with the DOM.",
   "keywords": [
     "document",
@@ -44,8 +44,8 @@
     "url": "git+https://github.com/hypersoftllc/qc-dom_utils.git"
   },
   "scripts": {
-    "build": "node scripts/build.js",
-    "build:prod": "cross-env NODE_ENV=production node scripts/build.js",
+    "build": "cross-env NODE_ENV=production node scripts/build.js",
+    "build:dev": "node scripts/build.js",
     "clean": "rimraf get.js index.js lib/",
     "prepare": "npm run build:prod",
     "test": "karma start",
