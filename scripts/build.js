@@ -20,7 +20,13 @@ function makeOutputFileCallback(outputFilename) {
   }
 }
 
-filenames = ['get.js', 'index.js']
+filenames = [
+  'get.js',
+  'index.js',
+  'form/focusFirstInvalidInputControl.js',
+  'form/get.js',
+  'form/index.js'
+]
 filenames.forEach((filename) => {
   let callback, inputFilename, outputFilename
 

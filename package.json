@@ -46,7 +46,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build.js",
     "build:dev": "node scripts/build.js",
-    "clean": "rimraf get.js index.js lib/",
+    "clean": "rimraf get.js index.js form/ lib/",
     "prepare": "npm run build",
     "test": "karma start",
     "travisci": "karma start --single-run --browsers PhantomJS"
