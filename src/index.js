@@ -1,7 +1,7 @@
 import get from './get'
-import getForm from './form/get'
+import form from './form'
 
 export default {
+  form,
   get,
-  getForm,
 }
