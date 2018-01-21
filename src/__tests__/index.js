@@ -24,7 +24,7 @@ describe('index.js', function () {
       beforeEach(function () {
         let fixture = `
           <div id="fixture">
-            <div id="foo"></div>
+            <div class="foo" id="bar"></div>
           </div>
         `
 
@@ -37,24 +37,27 @@ describe('index.js', function () {
         document.body.removeChild(document.getElementById('fixture'));
       });
 
-      it('called with an ID of an existing Element should return a reference to the element instance', function () {
+      it('called with a selector of an existing Element should return a reference to the element instance', function () {
         let elem
 
-        elem = DomUtils.get('foo')
+        elem = DomUtils.get('.foo')
+        expect(elem).to.be.instanceof(Element)
+
+        elem = DomUtils.get('#bar')
         expect(elem).to.be.instanceof(Element)
       })
 
       it('called with an `Element` instance should return the `Element` instance', function () {
         let elemIn, elemOut
 
-        elemIn = document.getElementById('foo')
+        elemIn = document.getElementById('bar')
         elemOut = DomUtils.get(elemIn)
 
         expect(elemOut).to.equal(elemIn)
       })
 
       it('called with an ID of a non-existing Element should return `null`', () => {
-        let elem = DomUtils.get('quux')
+        let elem = DomUtils.get('#quux')
 
         expect(elem).to.be.null
       })

@@ -1,14 +1,14 @@
 
-export default function get(id, winCntx) {
+export default function get(selector, winCntx) {
   let elem = null
 
   winCntx = (winCntx || window)
 
-  if (id instanceof Element) {
-    elem = id
+  if (selector instanceof Element) {
+    elem = selector
   }
-  else if (typeof id === 'string') {
-    elem = winCntx.document.getElementById(id)
+  else if (typeof selector === 'string') {
+    elem = winCntx.document.querySelector(selector)
   }
   return elem
 }

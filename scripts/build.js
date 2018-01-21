@@ -7,7 +7,8 @@ const babel = require('babel-core')
 const packageDir = path.resolve(__dirname, '..')
 const libDir = path.resolve(packageDir, 'lib')
 const srcDir = path.resolve(packageDir, 'src')
-const libCommonJsDir = path.resolve(libDir, 'commonjs')
+const outCjsDir = path.resolve(libDir, 'cjs')
+const outEsDir = packageDir
 let filenames
 
 function makeOutputFileCallback(outputFilename) {
@@ -21,7 +22,13 @@ function makeOutputFileCallback(outputFilename) {
 
 filenames = ['get.js', 'index.js']
 filenames.forEach((filename) => {
-  let inputFilename = path.resolve(srcDir, filename)
-  let callback = makeOutputFileCallback(path.resolve(libCommonJsDir, filename))
+  let callback, inputFilename, outputFilename
+
+  inputFilename = path.resolve(srcDir, filename)
+  outputFilename = path.resolve(outCjsDir, filename)
+  callback = makeOutputFileCallback(outputFilename)
   babel.transformFile(inputFilename, callback)
+
+  outputFilename = path.resolve(outEsDir, filename)
+  fse.copy(inputFilename, outputFilename)
 })

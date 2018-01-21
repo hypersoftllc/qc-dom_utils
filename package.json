@@ -1,6 +1,6 @@
 {
   "name": "qc-dom_utils",
-  "version": "0.0.0-alpha",
+  "version": "0.0.0",
   "description": "A set of utilities for working with the DOM.",
   "keywords": [
     "document",
@@ -10,6 +10,7 @@
     "javascript",
     "form",
     "getElementById",
+    "querySelector",
     "utilities",
     "utility",
     "window"
@@ -31,9 +32,9 @@
   },
   "files": [
     "lib/",
-    "src/index.js"
+    "*.js"
   ],
-  "main": "lib/commonjs/index.js",
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/hypersoftllc/qc-dom_utils/issues"
   },
@@ -44,7 +45,7 @@
   "scripts": {
     "build": "node scripts/build.js",
     "build:prod": "cross-env NODE_ENV=production node scripts/build.js",
-    "clean": "rimraf lib/",
+    "clean": "rimraf get.js index.js lib/",
     "prepare": "npm run build:prod",
     "test": "karma start",
     "test:prod": "karma start --single-run --browsers PhantomJS"

@@ -37,6 +37,18 @@ import get from 'qc-dom_utils/get'
 let elem = get('myElem')
 ```
 
+**Common JS**
+
+```js
+const DomUtils = require('qc-dom_utils/lib/cjs').default
+...
+```
+
+```js
+const get = require('qc-dom_utils/lib/cjs/get').default
+...
+```
+
 
 [license-image]: http://img.shields.io/npm/l/qc-dom_utils.svg
 [license-url]: LICENSE
