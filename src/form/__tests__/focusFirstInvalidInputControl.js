@@ -7,7 +7,7 @@ describe('form/focusFirstInvalidInputControl.js', function () {
     expect(document).to.not.be.null
   })
 
-  it('`HTMLFormElement` should be available', function() {
+  it('`HTMLFormElement` should be available', function () {
     expect(HTMLFormElement).to.not.be.undefined
     expect(HTMLFormElement).to.not.be.null
   })
@@ -30,14 +30,12 @@ describe('form/focusFirstInvalidInputControl.js', function () {
         </div>
       `
 
-      document.body.insertAdjacentHTML(
-        'afterbegin',
-        fixture);
-    });
+      document.body.insertAdjacentHTML('afterbegin', fixture)
+    })
 
-    afterEach(function() {
-      document.body.removeChild(document.getElementById('fixture'));
-    });
+    afterEach(function () {
+      document.body.removeChild(document.getElementById('fixture'))
+    })
 
     it('called with a name of an existing `HTMLFormElement` and a map of invalid input controls should focus the first invalid input control', function () {
       let elem

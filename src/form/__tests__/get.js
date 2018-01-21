@@ -7,7 +7,7 @@ describe('form/get.js', function () {
     expect(document).to.not.be.null
   })
 
-  it('`HTMLFormElement` should be available', function() {
+  it('`HTMLFormElement` should be available', function () {
     expect(HTMLFormElement).to.not.be.undefined
     expect(HTMLFormElement).to.not.be.null
   })
@@ -26,14 +26,12 @@ describe('form/get.js', function () {
         </div>
       `
 
-      document.body.insertAdjacentHTML(
-        'afterbegin',
-        fixture);
-    });
+      document.body.insertAdjacentHTML('afterbegin', fixture)
+    })
 
-    afterEach(function() {
-      document.body.removeChild(document.getElementById('fixture'));
-    });
+    afterEach(function () {
+      document.body.removeChild(document.getElementById('fixture'))
+    })
 
     it('called with a name of an existing `HTMLFormElement` should return a reference to the element instance', function () {
       let elem
