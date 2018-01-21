@@ -1,6 +1,6 @@
-import FormUtils from '../'
-import focusFirstInvalid from '../focusFirstInvalidInputControl'
-import get from '../get'
+import FormUtils from '../../form/'
+import focusFirstInvalid from '../../form/focusFirstInvalidInputControl'
+import get from '../../form/get'
 
 describe('form/index.js', function () {
 

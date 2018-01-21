@@ -4,10 +4,10 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     files: [
-      'src/**/__tests__/*.js',
+      'src/__tests__/**/*.js',
     ],
     preprocessors: {
-      'src/**/__tests__/*.js': ['webpack'],
+      'src/__tests__/**/*.js': ['webpack'],
     },
     webpack: webpackConfig,
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher

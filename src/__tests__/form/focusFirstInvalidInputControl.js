@@ -1,4 +1,4 @@
-import focusFirstInvalid from '../focusFirstInvalidInputControl'
+import focusFirstInvalid from '../../form/focusFirstInvalidInputControl'
 
 describe('form/focusFirstInvalidInputControl.js', function () {
 

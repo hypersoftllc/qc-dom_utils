@@ -1,4 +1,4 @@
-import get from '../get'
+import get from '../../form/get'
 
 describe('form/get.js', function () {
 
