@@ -1,6 +1,6 @@
 {
   "name": "qc-dom_utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of utilities for working with the DOM.",
   "keywords": [
     "document",
