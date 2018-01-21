@@ -1,6 +1,6 @@
 {
   "name": "qc-dom_utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A set of utilities for working with the DOM.",
   "keywords": [
     "document",
@@ -47,7 +47,7 @@
     "build": "cross-env NODE_ENV=production node scripts/build.js",
     "build:dev": "node scripts/build.js",
     "clean": "rimraf get.js index.js lib/",
-    "prepare": "npm run build:prod",
+    "prepare": "npm run build",
     "test": "karma start",
     "travisci": "karma start --single-run --browsers PhantomJS"
   },
