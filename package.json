@@ -49,7 +49,7 @@
     "clean": "rimraf get.js index.js lib/",
     "prepare": "npm run build:prod",
     "test": "karma start",
-    "test:prod": "karma start --single-run --browsers PhantomJS"
+    "travisci": "karma start --single-run --browsers PhantomJS"
   },
   "dependencies": {},
   "devDependencies": {
