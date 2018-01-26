@@ -5,11 +5,11 @@ const babel = require('babel-core')
 
 
 const packageDir = path.resolve(__dirname, '..')
-const libDir = path.resolve(packageDir, 'lib')
+const buildDir = path.resolve(packageDir, 'build')
+const libDir = path.resolve(buildDir, 'lib')
 const srcDir = path.resolve(packageDir, 'src')
 const outCjsDir = path.resolve(libDir, 'cjs')
-const outEsDir = packageDir
-let filenames
+const outEsDir = buildDir
 
 function makeOutputFileCallback(outputFilename) {
   return function (err, result) {
@@ -20,7 +20,7 @@ function makeOutputFileCallback(outputFilename) {
   }
 }
 
-filenames = [
+let filenames = [
   'get.js',
   'index.js',
   'form/focusFirstInvalidInputControl.js',

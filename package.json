@@ -31,6 +31,7 @@
     "npm": ">=3.0.0"
   },
   "files": [
+    "form/",
     "lib/",
     "get.js",
     "index.js"
@@ -46,9 +47,10 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build.js",
     "build:dev": "node scripts/build.js",
-    "clean": "rimraf get.js index.js form/ lib/",
+    "clean": "rimraf get.js index.js build/ form/ lib/",
     "lint": "eslint --max-warnings 0 src/",
-    "prepare": "npm run build",
+    "prepublishOnly": "npm run build && node scripts/prepublish.js",
+    "postpublish": "npm run clean",
     "test": "karma start",
     "test:prod": "karma start --single-run --browsers PhantomJS",
     "travisci": "npm-run-all -p lint test:prod"
