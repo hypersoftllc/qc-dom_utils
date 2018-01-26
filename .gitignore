@@ -9,6 +9,7 @@
 # production
 /build
 /dist
+/form
 /lib
 /get.js
 /index.js
